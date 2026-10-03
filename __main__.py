@@ -7,8 +7,8 @@ from modules import code_format
 from modules import blockquote_format
 from modules import image_format
 
-PATH_INPUT = "./input/" # Directory for all source files in markdown
-PATH_OUTPUT = "./output/" # Directory for all generated html
+PATH_INPUT = "./markdown/" # Directory for all source files in markdown
+PATH_OUTPUT = "./html/" # Directory for all generated html
 TEMPLATE_HTML = "./template.html"
 
 def format_md_content(md_content):

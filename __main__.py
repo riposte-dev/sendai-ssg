@@ -10,7 +10,6 @@ from modules import image_format
 PATH_INPUT = "./input/" # Directory for all source files in markdown
 PATH_OUTPUT = "./output/" # Directory for all generated html
 TEMPLATE_HTML = "./template.html"
-DATE_FORMAT = "%Y.%m.%d" # Default format for get_file_creation_date() and get_file_modified_date()
 
 def format_md_content(md_content):
     lines = md_content.split("\n") # Create a list of all lines in markdown content

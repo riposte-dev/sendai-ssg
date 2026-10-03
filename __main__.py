@@ -1,11 +1,11 @@
 import os
 import time
-import file_metadata
-import text_format
-import math_format
-import code_format
-import blockquote_format
-import image_format
+from modules import file_metadata
+from modules import text_format
+from modules import math_format
+from modules import code_format
+from modules import blockquote_format
+from modules import image_format
 
 PATH_INPUT = "./input/" # Directory for all source files in markdown
 PATH_OUTPUT = "./output/" # Directory for all generated html

@@ -14,7 +14,7 @@ Unlike math_format and code_format, we don't need to look separately for delimit
 
 However, we do need to use the text_format module to format text within the blockquote
 """
-import text_format
+from modules import text_format
 
 def check_for_blockquotes(lines):
     blockquote_indexes = []

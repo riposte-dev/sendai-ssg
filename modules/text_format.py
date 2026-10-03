@@ -1,6 +1,6 @@
-import math_format
-import code_format
-import blockquote_format
+from modules import math_format
+from modules import code_format
+from modules import blockquote_format
 
 HEADINGS = [
     "# ", # h1

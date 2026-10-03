@@ -126,7 +126,7 @@ def format_text_environment(lines):
                 heading_level = len(heading) - 1
 
                 if (line[:heading_level + 1] == heading):
-                    lines[i] = "<h" + str(heading_level) + ">" + line[heading_level:] + "</h" + str(heading_level) + ">"
+                    lines[i] = "<h" + str(heading_level) + ">" + line[heading_level + 1:] + "</h" + str(heading_level) + ">"
         else:
             lines[i] = "<p>" + line + "</p>"
 

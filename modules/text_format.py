@@ -48,7 +48,7 @@ def find_matches(delimiter, string):
 
 def format_text_line(line):
     # Check for bolded
-    bolded = find_matches("**", line) # Any text of the form: **text**
+    bolded = find_matches("**", line) + find_matches("__", line) # Any text of the form: **text**
 
     for match in bolded:
         line = line.replace(match, "<strong>" + match[2:-2] + "</strong>") # Replace **'s with html tags

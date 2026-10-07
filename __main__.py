@@ -36,11 +36,6 @@ def format_md_content(md_content):
 
 
 def generate_html_file(md_file):
-    # Read content from files
-    md_content = ""
-    with open(PATH_INPUT + md_file, "r") as content:
-        md_content = content.read()
-
     html_content = ""
     with open(TEMPLATE_HTML, "r") as template:
         html_content = template.read() # Copy html boilerplate from template file

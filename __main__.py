@@ -8,8 +8,6 @@ PATH_OUTPUT = "./html/" # Directory for all generated html
 TEMPLATE_HTML = "./template.html"
 
 def generate_html_file(md_file):
-    html_file = open(PATH_OUTPUT + md_file.replace(".md", ".html"), "w") # Create new or overwrite old file
-
     html_content = ""
     with open(TEMPLATE_HTML, "r") as template:
         html_content = template.read() # Copy html from template file
@@ -26,6 +24,7 @@ def generate_html_file(md_file):
     html_content = html_content.replace("[created]", file_metadata.get_file_creation_date(md_file))
     html_content = html_content.replace("[updated]", file_metadata.get_file_modified_date(md_file))
     
+    html_file = open(PATH_OUTPUT + md_file.replace(".md", ".html"), "w") # Create new or overwrite old file
     html_file.write(html_content) # Write the formatted content to html file
 
     return md_file.replace(".md", ".html")

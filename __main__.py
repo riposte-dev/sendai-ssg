@@ -13,7 +13,7 @@ def generate_html_file(md_file):
 
     html_content = ""
     with open(TEMPLATE_HTML, "r") as template:
-        html_content = template.read() # Copy html boilerplate from template file
+        html_content = template.read() # Copy html from template file
 
     output = subprocess.run(
         ["pandoc", PATH_INPUT + md_file],

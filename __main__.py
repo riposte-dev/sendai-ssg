@@ -65,9 +65,13 @@ def main():
     for md_file in os.listdir(PATH_INPUT):
         if (md_file.endswith(".md") == False):
             continue # Ignore any files that aren't markdown
+        
+        subprocess.run(["pandoc", PATH_INPUT + md_file])
 
+        """
         print("Parsing " + md_file + "...")
         html_file = generate_html_file(md_file)
+        """
 
 
 if __name__=="__main__":

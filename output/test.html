@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test</title>
     <link rel="stylesheet" href="../style.css">
+
+    <!-- MathJaX (Math rendering) -->
     <script id="MathJax-script" async
       src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js">
     </script>
     <script>
       MathJax = {
-            tex: {
-                inlineMath: {'[+]': [['$', '$']]},
-            },
+        tex: {
+          inlineMath: {'[+]': [['$', '$']]}, /* Add custom in-line delimiter: $ */
+        },
       };
     </script>
+
+    <!-- Prism.js (Code syntax highlighting) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/themes/prism.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </head>
 <body>
   <header>
@@ -23,16 +30,102 @@
 
   <main>
     <p>Hello, World!</p>
-<p>This is/was a markdown file.</p>
-$$
-f(x) = x^2 + 5x - 2
-$$
+<p>This file will be converted from Markdown to HTML. Make of it what
+you will…</p>
+<hr />
+<p>You can write bold like <strong>this</strong> or
+<strong>this</strong> and italics like <em>this</em> or
+<em>this</em>.</p>
+<p><del>Cross out words</del> or add a footenote.<a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Bullet points:</p>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ul>
+<p>Numbered lists:</p>
+<ol type="1">
+<li>Item</li>
+<li>Item</li>
+<li>Item</li>
+</ol>
+<p>Check lists:</p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />Task 1</label></li>
+<li><label><input type="checkbox" />Task 2</label></li>
+<li><label><input type="checkbox" />Task 3</label></li>
+</ul>
+<p>Tables:</p>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Header</th>
+<th>Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+</tr>
+<tr>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+</tr>
+<tr>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="../attachments/Photograph%20of%20a%20dog.jpg"
+alt="Photograph of a dog" />
+<figcaption aria-hidden="true">Photograph of a dog</figcaption>
+</figure>
+<p>Add an <a href="https://www.wikipedia.org/">external link</a>.</p>
+<blockquote>
+<p>You can quote someone.</p>
+</blockquote>
+<p>Math inline
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">ax^2 + bx + c</annotation></semantics></math>)
+and block:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mi>−</mi><mi>b</mi><mo>±</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+</annotation></semantics></math></p>
+<p>Code <code>inline</code> and block:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Hello, World!&quot;</span><span class="op">);</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h1 id="heading-1">Heading 1</h1>
+<h2 id="heading-2">Heading 2</h2>
+<h3 id="heading-3">Heading 3</h3>
+<h4 id="heading-4">Heading 4</h4>
+<h5 id="heading-5">Heading 5</h5>
+<h6 id="heading-6">Heading 6</h6>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>This is a footnote.<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
   </main>
 
   <footer>
-    <p>Created: 2026.08.08</p>
-    <p>Updated: 2026.08.08</p>
+    <p>Created: 2026.10.07</p>
+    <p>Updated: 2026.10.07</p>
   </footer>
 </body>
 </html>

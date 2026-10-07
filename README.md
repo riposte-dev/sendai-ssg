@@ -1,16 +1,4 @@
 # Sendai SSG
-A static site generator that uses Python scripts to generate HTML from Markdown files. Sendai aims to provide a lightweight workflow while allowing for hands-on configuration of how the website is presented.
-
-Sendai currently supports the following:
-- Paragraph
-	- **Bold**
-	- *Italics*
-- Headings
-- Blockquotes
-- Math (MathJaX)
-- Code
-    - Syntax highlighting (PrismJS)
-- Horizontal rules
-- Images
+A simple "static site generator" using [Python](https://www.python.org/) and [Pandoc](https://pandoc.org/). Convert your Markdown files into HTML while having hands-on configuration of your website.
 
 Please note that Sendai is still in *early* development!

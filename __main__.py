@@ -47,9 +47,15 @@ def generate_html_file(md_file):
     
     html_file = open(PATH_OUTPUT + md_file.replace(".md", ".html"), "w") # Create new or overwrite old file
 
+    output = subprocess.run(
+        ["pandoc", PATH_INPUT + md_file],
+        capture_output = True,
+        text = True
+    )
+
     # Fill out placeholders
     html_content = html_content.replace("[title]", file_metadata.get_file_name(md_file))
-    html_content = html_content.replace("[content]", format_md_content(md_content))
+    html_content = html_content.replace("[content]", output.stdout)
     html_content = html_content.replace("[created]", file_metadata.get_file_creation_date(md_file))
     html_content = html_content.replace("[updated]", file_metadata.get_file_modified_date(md_file))
     
@@ -65,7 +71,7 @@ def main():
             continue # Ignore any files that aren't markdown
         
         print("Parsing " + md_file + "...")
-        subprocess.run(["pandoc", PATH_INPUT + md_file])
+        generate_html_file(md_file)
 
 
 if __name__=="__main__":

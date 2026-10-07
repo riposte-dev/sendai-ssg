@@ -12,28 +12,6 @@ PATH_INPUT = "./markdown/" # Directory for all source files in markdown
 PATH_OUTPUT = "./html/" # Directory for all generated html
 TEMPLATE_HTML = "./template.html"
 
-def format_md_content(md_content):
-    lines = md_content.split("\n") # Create a list of all lines in markdown content
-
-    # Remove all empty lines
-    while "" in lines:
-        lines.remove("") 
-
-    # Parse all lines by their appropriate environment
-    text_format.format_text_environment(lines) # Text needs to be formatted first (See format_text_environment())
-    math_format.format_math_environment(lines)
-    code_format.format_code_environment(lines)
-    blockquote_format.format_blockquotes(lines)
-    image_format.format_image(lines)
-
-    html_body_content = ""
-
-    # Sum the content into html format
-    for line in lines:
-        html_body_content += line + "\n"
-
-    return html_body_content
-
 
 def generate_html_file(md_file):
     html_content = ""

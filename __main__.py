@@ -17,13 +17,14 @@ def generate_html_file(md_file):
     html_content = html_content.replace("[created]", file_metadata.get_file_creation_date(md_file))
     html_content = html_content.replace("[updated]", file_metadata.get_file_modified_date(md_file))
 
+    # Insert content parsed from markdown to html
     output = subprocess.run(
         ["pandoc", PATH_INPUT + md_file],
         capture_output = True,
         text = True
-    )
+    ).stdout
 
-    html_content = html_content.replace("[content]", output.stdout)
+    html_content = html_content.replace("[content]", output)
     
     html_file = open(PATH_OUTPUT + md_file.replace(".md", ".html"), "w") # Create new or overwrite old file
     html_file.write(html_content) # Write the formatted content to html file

@@ -7,7 +7,7 @@ Sendai currently supports the following:
 	- *Italics*
 - Headings
 - Blockquotes
-- MathJaX
+- Math (MathJaX)
 - Code
     - Syntax highlighting (PrismJS)
 - Horizontal rules

@@ -7,7 +7,6 @@ PATH_INPUT = "./markdown/" # Directory for all source files in markdown
 PATH_OUTPUT = "./html/" # Directory for all generated html
 TEMPLATE_HTML = "./template.html"
 
-
 def generate_html_file(md_file):
     html_file = open(PATH_OUTPUT + md_file.replace(".md", ".html"), "w") # Create new or overwrite old file
 
@@ -22,7 +21,7 @@ def generate_html_file(md_file):
     )
 
     # Fill out placeholders
-    html_content = html_content.replace("[title]", file_metadata.get_file_name(md_file))
+    html_content = html_content.replace("[title]", md_file.replace(".md", ""))
     html_content = html_content.replace("[content]", output.stdout)
     html_content = html_content.replace("[created]", file_metadata.get_file_creation_date(md_file))
     html_content = html_content.replace("[updated]", file_metadata.get_file_modified_date(md_file))

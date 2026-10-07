@@ -4,11 +4,6 @@ import time
 PATH_INPUT = "./markdown/" # Directory for all source files in markdown
 DATE_FORMAT = "%Y.%m.%d" # Default format for get_file_creation_date() and get_file_modified_date()
 
-def get_file_name(file):
-    # os.path.splitext(file) returns ["file_name", "file_extension"]
-    return os.path.splitext(file)[0]
-
-
 def get_file_creation_date(file):
     created_seconds = os.path.getctime(PATH_INPUT + file)
     created_formatted = time.ctime(created_seconds)

@@ -3,8 +3,8 @@ import time
 import subprocess
 from modules import file_metadata
 
-PATH_INPUT = "./markdown/" # Directory for all source files in markdown
-PATH_OUTPUT = "./html/" # Directory for all generated html
+PATH_INPUT = "./input/" # Directory for all source files in markdown
+PATH_OUTPUT = "./output/" # Directory for all generated html
 TEMPLATE_HTML = "./template.html"
 
 def generate_html_file(md_file):

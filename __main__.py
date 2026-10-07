@@ -59,8 +59,6 @@ def generate_html_file(md_file):
 
 
 def main():
-    subprocess.run(["ls", "-f"])
-
     # Generate html (to ./output) for every markdown file (in ./input)
     for md_file in os.listdir(PATH_INPUT):
         if (md_file.endswith(".md") == False):

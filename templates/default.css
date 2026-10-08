@@ -1,0 +1,20 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+img {
+    max-width: 100%; /* Prevent large images from spilling */
+}
+
+blockquote {
+    background-color: aliceblue;
+    border-radius: 4px;
+
+    border-left: 4px solid blue;
+    padding-left: 8px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}

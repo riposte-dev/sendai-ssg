@@ -1,6 +1,6 @@
 {
     "PATH_INPUT": "./input/",
     "PATH_OUTPUT": "./output/",
-    "TEMPLATE_HTML": "./template.html",
+    "TEMPLATE_HTML": "./templates/template.html",
     "DATE_FORMAT": "%Y.%m.%d"
 }

@@ -25,10 +25,9 @@ def generate_html_file(md_file):
     ).stdout
 
     html_content = html_content.replace("[content]", output)
-    
-    html_file = open(PATH_OUTPUT + md_file.replace(".md", ".html"), "w") # Create new or overwrite old file
-    html_file.write(html_content) # Write the formatted content to html file
-    html_file.close()
+
+    with open(PATH_OUTPUT + md_file.replace(".md", ".html"), "w") as html_file:
+        html_file.write(html_content) # Write the formatted content to html file
 
 
 def main():

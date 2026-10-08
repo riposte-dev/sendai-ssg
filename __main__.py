@@ -1,10 +1,11 @@
 import os
 import subprocess
+from modules import config
 from modules import file_metadata
 
-PATH_INPUT = "./input/" # Directory for all source files in markdown
-PATH_OUTPUT = "./output/" # Directory for all generated html
-TEMPLATE_HTML = "./template.html"
+PATH_INPUT = config.get_config("PATH_INPUT") # Directory for all source files in markdown
+PATH_OUTPUT = config.get_config("PATH_OUTPUT") # Directory for all generated html
+TEMPLATE_HTML = config.get_config("TEMPLATE_HTML")
 
 def generate_html_file(md_file):
     html_content = ""

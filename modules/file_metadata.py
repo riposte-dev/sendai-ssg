@@ -1,8 +1,9 @@
 import os
 import time
+from modules import config
 
-PATH_INPUT = "./input/" # Directory for all source files in markdown
-DATE_FORMAT = "%Y.%m.%d" # Default format for get_file_creation_date() and get_file_modified_date()
+PATH_INPUT = config.get_config("PATH_INPUT") # Directory for all source files in markdown
+DATE_FORMAT = config.get_config("DATE_FORMAT") # Default format for get_file_creation_date() and get_file_modified_date()
 
 def get_file_creation_date(file):
     created_seconds = os.path.getctime(PATH_INPUT + file)
